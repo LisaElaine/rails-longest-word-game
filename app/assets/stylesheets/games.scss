@@ -1,0 +1,86 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+h1, h2, p, a {
+  font-family: 'Open sans';
+}
+
+input[type=text] {
+  width: 300px;
+  height: 30px;
+  font-family: 'Open sans';
+  font-style: italic;
+}
+
+input[type=submit] {
+    padding: 0px 15px;
+    height: 30px;
+    background:#ccc;
+    cursor:pointer;
+    border-radius: 5px;
+    background-color: #337AB7;
+    color: white;
+    font-family: 'Open sans';
+    font-size: 15px;
+    font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  padding-top: 20px;
+  color: #66A7D4;
+}
+
+form {
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 20px;
+  a {
+    text-decoration: none;
+    color: #66A7D4;
+  }
+}
+
+.game {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.letter-card {
+  align-content: center;
+  padding: 15px;
+  background-color: #337AB7;
+  color: white;
+  margin-right: 10px;
+  border-radius: 3px;
+  h2 {
+    margin: 0px;
+  }
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

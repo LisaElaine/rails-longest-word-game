@@ -1,0 +1,13 @@
+<h1>Results</h1>
+<% if @results[:found] %>
+  <% if @results[:valid] %>
+    <p><strong>Congratulations! </strong><%= @results[:word] %> is an English word. Time taken: <%= @results[:time].round(2) %> seconds. Points earned: <strong><%= @results[:score] %></strong> Total Score: <strong><%= session[:score] %></strong> </p>
+  <% else %>
+    <p>Sorry but <strong><%= @results[:word] %></strong> can't be built out of <%= @results[:board] %>. Points earned: <strong><%= @results[:score] %></strong> Total Score: <strong><%= session[:score] %></strong></p>
+  <% end %>
+<% else %>
+  <p>Sorry but <strong><%= @results[:word] %></strong> does not seem to be a valid English word... Points earned: <strong><%= @results[:score] %> Total Score: <strong><%= session[:score] %></strong></p>
+<% end %>
+
+
+<%= link_to "Play again", new_path  %>

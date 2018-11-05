@@ -1,0 +1,21 @@
+
+<div class="container">
+  <h1>New Game</h1>
+  <div class="game">
+    <% @letters.each do |letter| %>
+      <div class="letter-card">
+          <h2><%= letter %></h2>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="container">
+  <form id="submit-guess" action="/score" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="text" name="guess">
+    <input type="submit" value="Play">
+    <%= hidden_field_tag :start_time, @start_time %>
+    <%= hidden_field_tag :letters, @letters.join %>
+  </form>
+</div>
+
